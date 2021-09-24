@@ -118,9 +118,7 @@ CFLAGS+=	-falign-jumps=1 -falign-loops=1 -falign-functions=1
 endif
 GCC_MINORVERSION = $(word 2, $(GCC_VERSION))
 ifneq ($(GCC_MINORVERSION),4)
-CFLAGS+=	-march=i386
-# Additionally you can enable:
-#CFLAGS+=	-mtune=i386
+CFLAGS+=	-mtune=i386
 endif
 
 LDFLAGS+=	-N

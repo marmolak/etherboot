@@ -460,7 +460,7 @@ CFLAGS+=	-DDOWNLOAD_PROTO_TFTP
 # Change default protocol to NFS
 # CFLAGS+=	-DDEFAULT_PROTO_NFS
 # Support to resolve hostnames in boot filename
-# CFLAGS+=	-DDNS_RESOLVER
+CFLAGS+=	-DDNS_RESOLVER
 
 # Multicast Support
 # CFLAGS+=	-DALLMULTI -DMULTICAST_LEVEL1 -DMULTICAST_LEVEL2 -DDOWNLOAD_PROTO_TFTM
