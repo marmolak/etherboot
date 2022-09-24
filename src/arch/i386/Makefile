@@ -204,10 +204,10 @@ $(BIN)/%.bin:	$(BIN)/%.o
 # Give the directory name, e.g. use $(BIN)/rtl8139.com as the target.
 
 $(BIN)/%.zo:	$(BIN)/%.zbin arch/i386/core/prefixzdata.lds $(MAKEDEPS)
-	$(LD) -T arch/i386/core/prefixzdata.lds -b binary $< -o $@
+	$(LD) -r -T arch/i386/core/prefixzdata.lds -b binary $< -o $@
 
 $(BIN)/%.uo:	$(BIN)/%.bin arch/i386/core/prefixudata.lds $(MAKEDEPS)
-	$(LD) -T arch/i386/core/prefixudata.lds -b binary $< -o $@
+	$(LD) -r -T arch/i386/core/prefixudata.lds -b binary $< -o $@
 
 # Intermediate prf rules
 
